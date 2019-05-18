@@ -1,0 +1,4 @@
+##Using list for stack implementation is better as there is no limit on the size of stack as we don't need contiguous memory locations. Whereas in array to increase the size of the stack we need to shift the whole stack to a new memory location.
+
+
+## Singly Linked list has a next pointer only, so we can only go in one direction, whereas using a doubly linked list we can traverse in both directions, i.e. forward as well as backward.

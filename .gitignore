@@ -1,0 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/recommender/recommender_frontend/node_modules
+/recommender/recommender_backend/node_modules

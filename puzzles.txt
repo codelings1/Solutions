@@ -1,0 +1,64 @@
+1. We can use the binary repesentation for the numbers 1 to 1000 like
+	for 1 it's 000000000000001
+	for 2 it's 000000000000010
+	
+	and so on
+	
+	We can then arrange the 15 prisoners as these bits and ask the prisoners who have the bit next to them marked as 1 to drink that bottle's wine. Now, to guess the bottle with poison, all the prisoners who die would be marked as 1 and others as 0. The decimal representation for the binary number so obtained would give us the bottle number.
+	
+	For example, if only 1st 3rd and 5th prisoner died, then,
+		000000000010101
+	So, the bottle with poison was bottle number 21.
+	
+	
+2. Chessboard:
+
+
+	a. Number of squares.
+		square with side as 1 : 8(horizontal) * 8(vertical)  , we have multiplied these as these are across the board.
+		square with side as 2 : 7(horizontal) * 7(vertical)
+		square with side as 3 : 6(horizontal) * 6(vertical)
+		square with side as 4 : 5(horizontal) * 5(vertical)
+		square with side as 5 : 4(horizontal) * 4(vertical)
+		square with side as 6 : 3(horizontal) * 3(vertical)
+		square with side as 7 : 2(horizontal) * 2(vertical)
+		square with side as 8 : 1
+		
+		Total square = 1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 = 204
+		
+	b. Number of overlapping edges:
+			There are total 204 squares, thus total of 204*4 edges = 816 edges.
+			The edges of the squares that are on the outermost region of the chessboard won't be overlapped.
+			
+			For squares of size 1:
+				Total squares = 64, total edges = 64*4 = 256
+				Edges that are on the outermost region of the chessboard = 8*4 = 32 (won't be overlapped) [because we have 32 square edges in the outermost regions]
+				
+				
+				Overlapping edges = 256-32 = 224, Non overlapping edges = 32
+				
+			For squares of size 2:
+				Total squares = 49, total edges = 49*4 = 196
+				Edges that are on the outermost region of the chessboard = 7*4 = 28 (won't be overlapped)
+				Also, we would have non overapping squares from the second row and column which would form non overlapping square sides = 7*4 = 28
+				
+				Overlapping edges = 196 - 56 = 140, Non overlapping edges = 28+28 = 56
+				
+			For squares of size 3:
+				Total squares = 36, total edges = 36*4 = 144
+				Edges that are on the outermost region of the chessboard = 6*4 = 24 (won't be overlapped)
+				Also, we would have non overapping squares from the second,third rows and columns which would form non overlapping square sides = (6*4)*2 = 48
+				
+				Overlapping edges = 144-72 = 72, Non overlapping edges = 48+24 = 72
+				
+			For squares of size 4:
+				Total squares = 25, total edges = 25*4 = 100
+				Edges that are on the outermost region of the chessboard = 5*4 = 20 (won't be overlapped)
+				Also, we would have non overapping squares from the second,third and fourth rows and columns which would form non overlapping square sides = (5*4)*3 = 60
+				
+				Overlapping edges = 100-80 = 20, Non overlapping edges = 60+20 = 80
+			
+			For square of size 5 and greater there would be no overlapping:
+				Overlapping edges = 0 , Non overlapping edges = (16+9+4+1)*4 = 120
+				
+	So, total overlapping  = 224+140+72+20 = 456, and non-overlapping = 32+56+72+80+120=360
